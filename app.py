@@ -92,3 +92,13 @@ def make_predictions(review):
     probability = "{:.2f}".format(float(probas[:, result]))
 
     return result, probability
+
+
+# Create app title and description
+
+st.title("Sentiment Analysis For movies")
+
+st.write(
+    "A simple machine learning app to predict the sentiment of a movie's reviews and feedbacks"
+)
+
