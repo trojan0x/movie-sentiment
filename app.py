@@ -102,3 +102,9 @@ st.write(
     "A simple machine learning app to predict the sentiment of a movie's reviews and feedbacks"
 )
 
+
+# Declare a form to receive a movie's review
+
+form = st.form(key="my_form")
+review = form.text_input(label="What do you think about this movie")
+submit = form.form_submit_button(label="Generate Prediction")
