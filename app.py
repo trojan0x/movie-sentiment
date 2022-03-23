@@ -77,4 +77,18 @@ def make_predictions(review):
 
     # Clean the data 
     clean_review = text_cleaning(review)
-    
+
+    # load the model and make prediction
+
+    model = joblib.load("sentiment_model_pipeline.pkl")
+
+    # make prediction
+
+    result = model.predict([clean_review])
+
+    # check probabilities
+
+    probas = model.predict_probas([clean_review])
+    probability = "{:.2f}".format(float(probas[:, result]))
+
+    return result, probability
