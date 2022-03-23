@@ -70,3 +70,11 @@ def text_cleaning(text, remove_stop_words=True, lemmatize_words=True):
 
 
     
+# Create predictions
+
+@st.cache
+def make_predictions(review):
+
+    # Clean the data 
+    clean_review = text_cleaning(review)
+    
